@@ -4,6 +4,7 @@ from os import system
 import time
 
 def instalar():
+    system("sudo apt update -y")
     system("sudo apt install xfce4 -y")
     system("sudo apt install xrdp -y")
     system("sudo apt install dbus-x11 -y")
