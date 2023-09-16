@@ -12,5 +12,5 @@ wget https://raw.githubusercontent.com/ivangabriel21/InterfazDebian/main/interfa
 # Como ejecutar
 
 ```bash
-python3 intefaz.py
+python3 interfaz.py
 ```
