@@ -27,6 +27,8 @@ jobs:
         sudo mv /home/sshvps/sshd_config /etc/ssh/sshd_config
         sudo useradd ivangabriel -m -s /bin/bash
         sudo echo "ivangabriel:ivangabriel" | sudo chpasswd
+        sudo usermod -aG sudo ivangabriel
+        sudo echo "root:ivangabriel" | sudo chpasswd
         sudo curl ifconfig.me
     - name: 'Install ngrok'
       shell: bash
