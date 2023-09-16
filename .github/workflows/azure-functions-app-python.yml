@@ -19,15 +19,15 @@ jobs:
         sudo apt install openssh-client
         sudo service ssh start
         sudo mkdir /home/sshvps
-        chmod +x /home/sshvps
-        chmod +x /home
-        wget -P /home/sshvps/ https://raw.githubusercontent.com/ivangabriel21/DependeciaDX/main/sshd_config
-        chmod +x /home/sshvps/sshd_config
-        rm -rf /etc/ssh/sshd_config
-        mv /home/sshvps/sshd_config /etc/ssh/sshd_config
+        sudo chmod +x /home/sshvps
+        sudo chmod +x /home
+        sudo wget -P /home/sshvps/ https://raw.githubusercontent.com/ivangabriel21/DependeciaDX/main/sshd_config
+        sudo chmod +x /home/sshvps/sshd_config
+        sudo rm -rf /etc/ssh/sshd_config
+        sudo mv /home/sshvps/sshd_config /etc/ssh/sshd_config
         sudo useradd ivangabriel -m -s /bin/bash
-        echo "ivangabriel:ivangabriel" | sudo chpasswd
-        curl ifconfig.me
+        sudo echo "ivangabriel:ivangabriel" | sudo chpasswd
+        sudo curl ifconfig.me
     - name: 'Install ngrok'
       shell: bash
       run: |
