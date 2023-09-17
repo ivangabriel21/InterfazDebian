@@ -37,5 +37,5 @@ jobs:
          ngrok config add-authtoken 2NFY94Rg01fQLXyc5rcr0pnqGn9_4caThWichq7xoTiQPdBmK
          sudo wget -P /home/sshvps/ https://raw.githubusercontent.com/ivangabriel21/InterfazDebian/main/ngrok_tunnel.sh
          sudo chmod +x ngrok_tunnel.sh
-         sudo /home/sshvps/ngrok_tunnel.sh
+         sudo bash /home/sshvps/ngrok_tunnel.sh
          ngrok tcp 22
