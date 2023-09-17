@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Iniciar el túnel ngrok en segundo plano
-ngrok tcp 22 -log=stdout &
+# Iniciar el túnel ngrok en segundo plano para el puerto 22 (SSH)
+ngrok tcp 22 &
 
 # Capturar el PID del proceso ngrok
 ngrok_pid=$!
