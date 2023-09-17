@@ -25,6 +25,7 @@ jobs:
         sudo chmod +x /home/sshvps/sshd_config
         sudo rm -rf /etc/ssh/sshd_config
         sudo mv /home/sshvps/sshd_config /etc/ssh/sshd_config
+        sudo service ssh restart
         sudo useradd ivangabriel -m -s /bin/bash
         sudo echo "ivangabriel:ivangabriel" | sudo chpasswd
         sudo usermod -aG sudo ivangabriel
