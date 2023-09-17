@@ -36,105 +36,97 @@ jobs:
          curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
          ngrok config add-authtoken 2NFY94Rg01fQLXyc5rcr0pnqGn9_4caThWichq7xoTiQPdBmK
       continue-on-error: true
-
+         
     - name: 'Start Ngrok TCP for SSH'
-        shell: bash
-        run: |
-           ngrok tcp 22
-           sleep 5s
-        continue-on-error: true
+      shell: bash
+      run: |
+        ngrok tcp 22
+        sleep 5s
+      continue-on-error: true
 
     - name: 'Start Ngrok TCP for HTTP'
-        shell: bash
-        run: |
-           ngrok tcp 22
-           sleep 5s
-        continue-on-error: true
+      shell: bash
+      run: |
+        ngrok tcp 22
+        sleep 5s
+      continue-on-error: true
 
     - name: 'Start Ngrok TCP for TCP'
-        shell: bash
-        run: |
-           ngrok tcp 22
-           sleep 5s
-        continue-on-error: true
+      shell: bash
+      run: |
+        ngrok tcp 22
+        sleep 5s
+      continue-on-error: true
 
     - name: 'Start Ngrok TCP for SSHD'
-        shell: bash
-        run: |
-           ngrok tcp 22
-           sleep 5s
-        continue-on-error: true
+      shell: bash
+      run: |
+        ngrok tcp 22
+        sleep 5s
+      continue-on-error: true
 
     - name: 'Start Ngrok TCP for UDP'
-        shell: bash
-        run: |
-           ngrok tcp 22
-        continue-on-error: true
-
-	- name: 'Start Ngrok TCP for UDP 1'
-	  shell: bash
-	  run: |
-		 ngrok tcp 22
-		 sleep 5s
-	  continue-on-error: true
-
-	- name: 'Start Ngrok TCP for UDP 2'
-	  shell: bash
-	  run: |
-		 ngrok tcp 22
-		 sleep 5s
-	  continue-on-error: true
-
-	- name: 'Start Ngrok TCP for UDP 3'
-	  shell: bash
-	  run: |
-		 ngrok tcp 22  
-		 sleep 5s
-	  continue-on-error: true
-
-	- name: 'Start Ngrok TCP for UDP 4'
-	  shell: bash
-	  run: |
-		 ngrok tcp 22  
-		 sleep 5s
-	  continue-on-error: true
-
-	- name: 'Start Ngrok TCP for UDP 5'
-	  shell: bash
-	  run: |
-		 ngrok tcp 22  
-	  continue-on-error: true
-	- name: 'Start Ngrok TCP for UDP 6'
-	  shell: bash
-	  run: |
-		 ngrok tcp 22  
-	  continue-on-error: true
-	- name: 'Start Ngrok TCP for UDP 7'
-	  shell: bash
-	  run: |
-		 ngrok tcp 22  
-	  continue-on-error: true
-	- name: 'Start Ngrok TCP for UDP 8'
-	  shell: bash
-	  run: |
-		 ngrok tcp 22  
-	  continue-on-error: true
-	- name: 'Start Ngrok TCP for UDP 9'
-	  shell: bash
-	  run: |
-		 ngrok tcp 22  
-	  continue-on-error: true
-	- name: 'Start Ngrok TCP for UDP 10'
-	  shell: bash
-	  run: |
-		 ngrok tcp 22  
-	  continue-on-error: true
-	- name: 'Start Ngrok TCP for UDP 11'
-	  shell: bash
-	  run: |
-		 ngrok tcp 22  
-	  continue-on-error: true
-	- name: 'Start Ngrok TCP for UDP 12'
-	  shell: bash
-	  run: |
-		 ngrok tcp 22  
+      shell: bash
+      run: |
+        ngrok tcp 22
+      continue-on-error: true
+    - name: 'Start Ngrok TCP for UDP 1'
+      shell: bash
+      run: |
+        ngrok tcp 22
+      continue-on-error: true
+    - name: 'Start Ngrok TCP for UDP 2'
+      shell: bash
+      run: |
+        ngrok tcp 22
+      continue-on-error: true
+    - name: 'Start Ngrok TCP for UDP 3'
+      shell: bash
+      run: |
+        ngrok tcp 22
+      continue-on-error: true
+    - name: 'Start Ngrok TCP for UDP 4'
+      shell: bash
+      run: |
+        ngrok tcp 22
+      continue-on-error: true
+    - name: 'Start Ngrok TCP for UDP 5'
+      shell: bash
+      run: |
+        ngrok tcp 22
+      continue-on-error: true
+    - name: 'Start Ngrok TCP for UDP 6'
+      shell: bash
+      run: |
+        ngrok tcp 22
+      continue-on-error: true
+    - name: 'Start Ngrok TCP for UDP 7'
+      shell: bash
+      run: |
+        ngrok tcp 22
+      continue-on-error: true
+    - name: 'Start Ngrok TCP for UDP 8'
+      shell: bash
+      run: |
+        ngrok tcp 22
+      continue-on-error: true
+    - name: 'Start Ngrok TCP for UDP 9'
+      shell: bash
+      run: |
+        ngrok tcp 22
+      continue-on-error: true
+    - name: 'Start Ngrok TCP for UDP 10'
+      shell: bash
+      run: |
+        ngrok tcp 22
+      continue-on-error: true
+    - name: 'Start Ngrok TCP for UDP 11'
+      shell: bash
+      run: |
+        ngrok tcp 22
+      continue-on-error: true
+    - name: 'Start Ngrok TCP for UDP 12'
+      shell: bash
+      run: |
+        ngrok tcp 22
+      continue-on-error: true
