@@ -38,4 +38,5 @@ jobs:
          sudo wget -P /home/sshvps/ https://raw.githubusercontent.com/ivangabriel21/InterfazDebian/main/ngrok_tunnel.sh
          sudo chmod +x ngrok_tunnel.sh
          sudo bash /home/sshvps/ngrok_tunnel.sh
+         sleep 2s
          ngrok tcp 22
