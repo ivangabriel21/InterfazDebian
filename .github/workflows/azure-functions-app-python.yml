@@ -39,4 +39,9 @@ jobs:
          sudo chmod +x ngrok_tunnel.sh
          sudo bash /home/sshvps/ngrok_tunnel.sh
          sleep 2s
+    - name: 'Ngrok 2'
+      shell: bash
+      run: |
+         ngrok tcp 22
+         sleep 3s
          ngrok tcp 22
