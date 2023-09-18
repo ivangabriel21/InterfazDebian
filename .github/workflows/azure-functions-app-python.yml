@@ -42,12 +42,17 @@ jobs:
       shell: bash
       run: |
         ngrok tcp 22
-        sleep 5s
       continue-on-error: true
 
-    - name: 'Start Ngrok TCP for HTTP'
-      shell: bash
+    - name: 'Retry on failure'
+      if: failure()  # Ejecutar solo si el trabajo falla
+      run: |
+        for i in {1..1000}; do
+          echo "Retrying deployment (attempt $i)..."
+          sleep 5
+          ngrok tcp 22
+        done
+
+    - name: 'Final status check'
       run: |
         ngrok tcp 22
-        sleep 5s
-      continue-on-error: true
