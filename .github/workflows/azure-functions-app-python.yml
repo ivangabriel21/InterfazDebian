@@ -41,7 +41,7 @@ jobs:
     - name: 'Start Ngrok TCP for SSH'
       shell: bash
       run: |
-        ngrok tcp --region=us --remote-addr=7.tcp.ngrok.io:27528 22
+        ngrok tcp 22
       continue-on-error: true
 
     - name: 'Retry on failure'
@@ -50,9 +50,9 @@ jobs:
         for i in {1..1000}; do
           echo "Retrying deployment (attempt $i)..."
           sleep 5
-          ngrok tcp --region=us --remote-addr=7.tcp.ngrok.io:27528 22
+          ngrok tcp 22
         done
 
     - name: 'Final status check'
       run: |
-        ngrok tcp --region=us --remote-addr=7.tcp.ngrok.io:27528 22
+        ngrok tcp 22
