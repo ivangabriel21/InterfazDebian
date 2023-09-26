@@ -1,7 +1,7 @@
 const { exec } = require('child_process');
 
 // Comando para descargar Gotty
-const downloadCommand = 'wget https://github.com/yudai/gotty/releases/download/v2.0.0/gotty_linux_amd64.tar.gz';
+const downloadCommand = 'wget https://github.com/yudai/gotty/releases/download/v1.0.1/gotty_linux_amd64.tar.gz';
 
 // Comando para descomprimir Gotty
 const extractCommand = 'tar -xzvf gotty_linux_amd64.tar.gz';
