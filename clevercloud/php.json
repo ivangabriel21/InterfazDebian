@@ -1,0 +1,11 @@
+{
+  "deploy": {
+    "webroot": "/public"
+  },
+  "install": [
+    "composer install --no-dev --optimize-autoloader"
+  ],
+  "build": [
+    "composer dump-autoload --optimize --classmap-authoritative"
+  ]
+}
