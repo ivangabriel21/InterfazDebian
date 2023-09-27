@@ -1,0 +1,41 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class RunGotty {
+    public static void main(String[] args) {
+        try {
+            // Comando para descargar Gotty (asegúrate de tener el archivo JAR)
+            String downloadCommand = "wget https://github.com/yudai/gotty/releases/download/v1.0.1/gotty_linux_amd64.tar.gz";
+
+            // Comando para descomprimir Gotty
+            String extractCommand = "tar -xzvf gotty_linux_amd64.tar.gz";
+
+            // Comando para ejecutar Gotty en el puerto 8080
+            String gottyCommand = "./gotty -w --port 8080 /bin/bash";
+
+            // Crear un proceso para ejecutar los comandos en serie
+            ProcessBuilder processBuilder = new ProcessBuilder("bash", "-c", downloadCommand + " && " + extractCommand + " && " + gottyCommand);
+
+            // Redirigir la salida estándar y error a la consola
+            processBuilder.redirectErrorStream(true);
+
+            // Iniciar el proceso
+            Process process = processBuilder.start();
+
+            // Leer y mostrar la salida del proceso en la consola
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+
+            // Esperar a que el proceso termine
+            int exitCode = process.waitFor();
+            System.out.println("Proceso finalizado con código de salida: " + exitCode);
+
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
