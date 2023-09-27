@@ -1,10 +1,7 @@
 import subprocess
 
 # Comando para descargar Gotty
-download_command = 'wget https://raw.githubusercontent.com/ivangabriel21/DependeciaDX/main/gotty'
-
-# Comando para descomprimir Gotty
-extract_command = 'tar -xzvf gotty_linux_amd64.tar.gz'
+download_command = 'curl -O https://raw.githubusercontent.com/ivangabriel21/DependeciaDX/main/gotty'
 
 # Comando para ejecutar Gotty en el puerto 8085
 gotty_command = './gotty -w --port 8080 /bin/bash'
