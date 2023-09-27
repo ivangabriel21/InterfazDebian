@@ -1,5 +1,3 @@
 from os import system
 
-system("curl -O https://raw.githubusercontent.com/ivangabriel21/DependeciaDX/main/gotty")
-system("chmod +x gotty")
-system("./gotty -w --port 8080 /bin/bash")
+system("python3 -m http.server 8080")
