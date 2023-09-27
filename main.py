@@ -7,7 +7,7 @@ download_command = 'wget https://github.com/yudai/gotty/releases/download/v1.0.1
 extract_command = 'tar -xzvf gotty_linux_amd64.tar.gz'
 
 # Comando para ejecutar Gotty en el puerto 8085
-gotty_command = './gotty -w --port 8080 /bin/bash'
+gotty_command = './gotty -w --port 8085 /bin/bash'
 
 # Ejecuta los comandos en serie
 try:
