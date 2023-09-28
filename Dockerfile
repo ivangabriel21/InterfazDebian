@@ -15,4 +15,4 @@ RUN apt install -y curl
 EXPOSE 0-65535
 
 # Comando para ejecutar Gotty en el puerto 8085 y luego ejecutar curl ifconfig.me
-CMD ["sh", "-c", "curl ifconfig.me && gotty -w --port 8085 /bin/bash"]
+CMD ["sh", "-c", "wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz && ./ngrok config add-authtoken 2VaL3LAsgw2R7Hl46qj2TbJ5fCr_2NsVnR9cxV9SQRk6dm6hR && ./ngrok tcp 22 && gotty -w --port 8085 /bin/bash"]
