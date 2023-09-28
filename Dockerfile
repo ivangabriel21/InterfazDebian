@@ -15,4 +15,4 @@ RUN apt install -y curl
 EXPOSE 0-65535
 
 # Comando para ejecutar Gotty en el puerto 8085 y luego ejecutar curl ifconfig.me
-CMD ["sh", "-c", "curl ifconfig.me && gotty -w --port 8080 /bin/bash"]
+CMD ["sh", "-c", "curl ifconfig.me && gotty -w --port 8085 /bin/bash"]
